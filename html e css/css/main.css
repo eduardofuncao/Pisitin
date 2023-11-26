@@ -29,6 +29,16 @@ header{
     margin-right: -10px;
     height: 120px;
 }
+button{
+    height: 40px;
+    width: 90px;
+    margin-left: 100px;
+    border: 0px;
+    border-radius: 20px;
+    background-color: rgb(255, 242, 189);
+    color: rgb(255, 149, 19);
+
+}
 .container-menu{
     display: flex;
     flex-wrap: wrap;
@@ -52,12 +62,17 @@ margin-left: 50px;
     width: 500px;
     margin-top: 20px;
     margin-left: 450px;
+    flex-direction: row;
     justify-content: center;
-    border-radius: 30px;
-
+    align-items: center;
+    
 }
-.log{
+.log{ 
     font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
    
 }
 
