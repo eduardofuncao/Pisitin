@@ -69,7 +69,7 @@ margin-left: 50px;
 }
 .container-cad {
     width: 101vw;
-    height: 130vh;
+    height: 190vh;
     background: rgb(255, 244, 229);
     display: flex;
     flex-direction: row;
@@ -82,7 +82,7 @@ margin-left: 50px;
 }
 .box {
     width: 30vw;
-    height: 110vh;
+    height: 145vh;
     background: rgb(247, 168, 72);
 }
 .botao{
