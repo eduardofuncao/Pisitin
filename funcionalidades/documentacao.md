@@ -37,11 +37,11 @@ Usando o framework [Mermaid.js](https://mermaid.live/) (Usado para desenvolvimen
 
 ```mermaid
 classDiagram
-    Usuario <|-- Paciente
-    Usuario <|-- Psicologo
     Usuario -- ChatBot
     Usuario -- Perfil
     Usuario -- Sessao
+    Usuario <|-- Paciente
+    Usuario <|-- Psicologo
     Paciente -- Preferencias
     Psicologo -- Especialidade
     Paciente -- Match
@@ -49,51 +49,67 @@ classDiagram
     Match -- Agendamento
 
 
+
     class Usuario{
-        idUser:
+        idUser: String
         -nome: String
-        -idade: int
         -cidade: String
         -idiomas: String[]
         -email: String
+        -telefone: String
+        -bio: String
     }
 
     class ChatBot{
-        idChat: String
-        dataInicio: String
+        -idChatbot: String
+        -idChat: String
+        -dataInicio: String
     }
 
     class Sessao{
-        tempoComeco: long
-        tempoFim: long
+        -idSessao: String
+        -tempoComeco: long
+        -tempoFim: long
     }
 
     class Paciente{
+        -idPaciente: String
         -planoSaude: String
     }
 
     class Psicologo{
+        -CRPPsicologo: String
         -especialidade: String
         -valorConsulta: double
         -formacao: String
+        -Disponibilidade: String
+        -Avaliacao: double
     }
 
     class Match{
-
+        -idMatch: String
+        -selecao: boolean
+        -dataMatch: String
+        -mensagemInicial: String
     }
 
     class Especialidade{
-        
+        -IdEspecialidade: String
+        -nomeEspecialidade: String
+        -certificacao:String
     }
 
     class Preferencias{
-
+        -idPreferencias: String
+        -especialidade: String
+        -formatoAtendimento: String
     }
 
     class Agendamento{
-        
+        data: String
+        hora: String
+        linkReuniao: String
     }
-
 
 
 ```
