@@ -19,9 +19,10 @@ a{
 }
 p{
     font-family: sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     color: rgb(255, 242, 189);
     text-decoration: none;
+    margin-bottom: -30px;
 
 
 }
@@ -96,16 +97,7 @@ margin-left: 50px;
     text-align: center;
     color: rgb(255, 149, 19);
 }
-.botao{
-    align-items: center;
-    margin-left: 105px;
-    height: 40px;
-    width: 100px;
-    border: 0px;
-    background-color: rgb(255, 242, 189);
-    color: rgb(255, 149, 19);
-    
-}
+
 .esquece{
     font-size: 15px;
     text-align: center;
@@ -120,5 +112,10 @@ margin-left: 50px;
     text-align: justify;
     margin-top: -24px;
     margin-left: 0px;
+    
+}
+.botao-login{
+    color: rgb(255, 242, 189);
+    text-align: center;
     
 }

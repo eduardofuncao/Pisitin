@@ -10,13 +10,14 @@ A DEFINIR
 '''
 nome = []
 região = []
+area = []
 
 stop = False
 while not stop:
     print('''
     Menu de funcionalidades:
-    1. Opção 1 - Cadastro Paciente
-    2. 1. Opção 2 - Cadastro Psicologo
+    1. Opção 1 - Cadastro Psicologo
+    2. 1. Opção 2 - Cadastro Paciente
     3. 1. Opção 3 - informações da conta
     4. 1. Opção 4 - Contas que combinam com você!
     5. Sair
@@ -24,19 +25,28 @@ while not stop:
     # seleção do usuário
     sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
     if sel == 1:
-        print("Login")
+        print("----Cadastro----")
         nome = input("Digite o seu nome: ")
         senha = input("Digite uma senha: ")
         região = input("Digite a sua região: ")
+        CFP = int(input("Digite o seu CFP, Cadastro Nacional de Psicólogas(os):"))
+        area = int(input("Escolha a sua área de atuação:\n 1-Psicanálise\n 2-Psicologia Analítica\n 3-Cognitivo-Comportamental:"))
 
 
-        print("Sucesso ao entrar na conta!")
+        print("Sucesso ao se cadastrar!")
 
         input()
 
 
     elif sel == 2:
-        print("opção 2")
+        print("----Cadastro----")
+        nome = input("Digite o seu nome: ")
+        senha = input("Digite uma senha: ")
+        região = input("Digite a sua região: ")
+        area = int(input("Escolha a sua área de atuação:\n 1-Psicanálise\n 2-Psicologia Analítica\n 3-Cognitivo-Comportamental:"))
+
+        print("Sucesso")
+
     
     elif sel == 3:
         print("opção 3")
