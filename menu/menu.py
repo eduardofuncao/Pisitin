@@ -24,8 +24,14 @@ while not stop:
 ''')
     # seleção do usuário
     sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
+    while((sel<=0) or (sel>=5)):
+        print('Erro! digite um numero que esteja na lista de opções.')
+        sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
+    
+
+
     if sel == 1:
-        print("----Cadastro----")
+        print("----Cadastro Psicólogo----")
         nome = input("Digite o seu nome: ")
         senha = input("Digite uma senha: ")
         região = input("Digite a sua região: ")
@@ -39,7 +45,7 @@ while not stop:
 
 
     elif sel == 2:
-        print("----Cadastro----")
+        print("----Cadastro Paciente----")
         nome = input("Digite o seu nome: ")
         senha = input("Digite uma senha: ")
         região = input("Digite a sua região: ")
@@ -49,7 +55,9 @@ while not stop:
 
     
     elif sel == 3:
-        print("opção 3")
+        print("Informações da conta")
+        print(f"Nome: {nome} | região: {região} | área escolhida: {area}")
+
 
     elif sel == 4:
         print("opção 4")
