@@ -32,7 +32,7 @@ while not stop:
     5. Sair
 ''')
     sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
-    while not (1 <= sel <= 4):
+    while not (1 <= sel <= 5):
         print('Erro! Digite um número que esteja na lista de opções.')
         sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
 
@@ -71,7 +71,12 @@ while not stop:
                     print(f"Nome psicólogo: {nome_psi[j]} | Região psicólogo: {região_psi[j]} | Área escolhida psicólogo: {area_psi[j]}")
 
     elif sel == 5:
-        print("saiu do programa")
+        print("Saindo do programa...")
+        stop = True
+
+    # Esta mensagem será exibida quando o usuário escolher sair
+    print("Fim do programa!")
+
 
 
 
