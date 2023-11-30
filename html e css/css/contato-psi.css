@@ -104,3 +104,34 @@ h3{
     font-family: sans-serif;
     text-align: center;
 }
+.box-lista{
+    background-color: rgb(255, 244, 229);
+    width: 45vw;
+    height: 17vh;
+    border-radius: 30px;
+    margin-top: 4vh;
+    margin-left: 20vw;
+}
+.pac{
+    width: 7vw;
+    border-radius:45px;
+    padding-top: 2vh;
+}
+.info-pac{
+    font-size: 20px;
+    color: black;
+}
+.reg-pac{
+    font-size: 16px;
+    margin-top: -2vh;
+    color: rgb(108, 99, 98);
+}
+.ace-rec{
+    width: 3vw;
+}
+.big-box{
+    width: 60vw;
+    height: 110vh;
+    background-color: bisque;
+    border-radius: 20px;
+}
