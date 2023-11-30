@@ -21,6 +21,7 @@ area_psi = []
 qntd_pac = 0
 qntd_psi = 0
 
+
 stop = False
 while not stop:
     print('''
@@ -69,6 +70,13 @@ while not stop:
                 if (região_pac[i] == região_psi[j]) and (area_pac[i] == area_psi[j]):
                     print(f"Nome paciente: {nome_pac[i]} | Região paciente: {região_pac[i]} | Área escolhida paciente: {area_pac[i]}")
                     print(f"Nome psicólogo: {nome_psi[j]} | Região psicólogo: {região_psi[j]} | Área escolhida psicólogo: {area_psi[j]}")
+
+                sel_pac = int(input("Você quer prosseguir e entrar em contato com o(s) psicólogo(s)? | 1-sim | 2-não: "))
+                if(sel_pac == 1):
+                    print("Ok, em breve a aba de contato estará disponível para você!")
+                else:
+                    print("Ok, buscaremos mais opções para você!")
+                
 
     elif sel == 5:
         print("Saindo do programa...")
