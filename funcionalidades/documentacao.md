@@ -16,7 +16,7 @@
 Como forma de contextualização da discussão, a seguir está descrita uma das metas do ODS 3 de acordo com a ONU:
 > 3.4 até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis (DNTs) via prevenção e tratamento, e promover a saúde mental e o bem-estar
 
-Esta foi    adequada para a realidade brasileira pelo [IPEA](https://www.ipea.gov.br/ods/ods3.html) da seguinte maneira:
+Esta foi adequada para a realidade brasileira pelo [IPEA](https://www.ipea.gov.br/ods/ods3.html) da seguinte maneira:
 > Até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis via prevenção e tratamento, promover a saúde mental e o bem-estar, a saúde do trabalhador e da trabalhadora, e prevenir o suicídio, alterando significativamente a tendência de aumento.
 
 Dentro dessa problemática, é notável que a questão da promoção de discussões é o ato de trazer holofotes para as questões de saúde mental são de grande importância para a prosperidade social do mundo. Não é coincidência que seja um tema tratado com tanto cuidado e destaque, a nível nacional e internacional.
@@ -34,52 +34,54 @@ Olhando o caso da Happvida, a promoção de um sistema para encontro e agendamen
 - Chatbot que 
 ### Diagrama de Classes
 Usando o framework [Mermaid.js](https://mermaid.live/) (Usado para desenvolvimento de diagramas embutidos em javascript), foi criado o diagrama de classes a seguir para a solução **Pisitin**:
-
 ```mermaid
 classDiagram
+    direction LR
     Usuario -- ChatBot
-    Usuario -- Perfil
     Usuario -- Sessao
-    Usuario <|-- Paciente
     Usuario <|-- Psicologo
-    Paciente -- Preferencias
+    Usuario <|-- Paciente
+
     Psicologo -- Especialidade
-    Paciente -- Match
     Psicologo -- Match
+    Paciente -- Match
     Match -- Agendamento
 
 
 
     class Usuario{
-        idUser: String
+        idUser: int
         -nome: String
         -cidade: String
-        -idiomas: String[]
         -email: String
         -telefone: String
+        -sexo: String
         -bio: String
+        #showUser()
     }
 
     class ChatBot{
-        -idChatbot: String
-        -idChat: String
+        -id: int
         -dataInicio: String
     }
 
     class Sessao{
-        -idSessao: String
-        -tempoComeco: long
-        -tempoFim: long
+        -idSessao: int
+        -tempoComeco: LocalDataTime
+        -tempoFim: LocalDateTime
+        +start(): String
+        +end(): String
     }
 
     class Paciente{
-        -idPaciente: String
+        -idPaciente: int
         -planoSaude: String
+        +show(): void
     }
 
     class Psicologo{
-        -CRPPsicologo: String
-        -especialidade: String
+        -CRPPsicologo: int
+        -especialidades: ArrayList<String>
         -valorConsulta: double
         -formacao: String
         -Disponibilidade: String
@@ -87,29 +89,23 @@ classDiagram
     }
 
     class Match{
-        -idMatch: String
-        -selecao: boolean
-        -dataMatch: String
+        -idMatch: int
+        -dataMatch: LocalDateTime   
         -mensagemInicial: String
+        +combina(): String
     }
 
     class Especialidade{
-        -IdEspecialidade: String
-        -nomeEspecialidade: String
-        -certificacao:String
-    }
-
-    class Preferencias{
-        -idPreferencias: String
-        -especialidade: String
-        -formatoAtendimento: String
+        -IdEspecialidade: int
+        -nome: String
+        -curso:String
     }
 
     class Agendamento{
-        data: String
-        hora: String
-        linkReuniao: String
+        -data: String
+        -hora: String
+        -linkReuniao: String
+        +marcar(): String
+        +desconto(): String
     }
-
-
 ```

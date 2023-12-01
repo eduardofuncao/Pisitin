@@ -1,24 +1,24 @@
 package Funcionalidades;
 
 public class ChatBot {
-	private String id;
+	private int id;
 	private String dataInicio;
 	
 	public ChatBot() {
 		
 	}
 	
-	public ChatBot(String id, String dataInicio) {
+	public ChatBot(int id, String dataInicio) {
 		super();
 		this.id = id;
 		this.dataInicio = dataInicio;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
