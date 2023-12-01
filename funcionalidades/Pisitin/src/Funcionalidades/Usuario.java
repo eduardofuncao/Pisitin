@@ -78,7 +78,7 @@ public class Usuario {
 	public void setBio(String bio) {
 		this.bio = bio;
 	}
-	
+	// imprime no console as iformações do usuário
 	protected void showUser() {
 		System.out.println("Nome: " + this.getNome());
 		System.out.println("Email: " + this.getEmail());

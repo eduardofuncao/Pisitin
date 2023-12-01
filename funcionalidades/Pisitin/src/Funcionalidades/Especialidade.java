@@ -1,7 +1,7 @@
 package Funcionalidades;
 
 public class Especialidade {
-	private String id;
+	private int id;
 	private String nome;
 	private String curso;
 	
@@ -9,19 +9,19 @@ public class Especialidade {
 		
 	}
 	
-	public Especialidade(String id, String nome, String curso) {
+	public Especialidade(int id, String nome, String curso) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.curso = curso;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setId(int i) {
+		this.id = i;
 	}
 
 	public String getNome() {

@@ -36,7 +36,6 @@ public class Paciente extends Usuario{
 			System.out.println("Paciente " + this.getIdUser());
 			this.showUser();
 			System.out.println("Plano de Saúde: " + this.getPlanoSaude());	
-			System.out.println("Bio: " + this.getBio());
 		} 
 		else if(choice.equals("simples")) {
 			System.out.println("Paciente " + this.getIdUser() + " - Nome: " + this.getNome());
