@@ -67,6 +67,7 @@
             region: "us-south", // The region your integration is hosted in.
             serviceInstanceID: "2a6ec96e-a379-4ec4-8d90-dfbdc3b6fde4", // The ID of your service instance.
             onLoad: async (instance) => { await instance.render(); }
+            instance.updateLocale('pt-br');
         };
         setTimeout(function(){
             const t=document.createElement('script');
