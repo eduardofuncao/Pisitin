@@ -12,7 +12,7 @@ public class Psicologo extends Usuario{
 		super();
 	}
 	
-	public Psicologo(String idUser, String nome, String email, String telefone, String cidade, String sexo,
+	public Psicologo(int idUser, String nome, String email, String telefone, String cidade, String sexo,
 			String bio, String CRPPsicologo, String especialidade, String valorConsulta, String formacao, String disponibilidade, String avaliacao) {
 		super(idUser, nome, email, telefone, cidade, sexo, bio);
 		this.CRPPsicologo = CRPPsicologo;
@@ -71,5 +71,23 @@ public class Psicologo extends Usuario{
 		this.avaliacao = avaliacao;
 	}
     
+	public void show(String choice) {
+		if (choice.equals("total")){
+			System.out.println("Paciente " + this.getIdUser());
+			this.showUser();
+			System.out.println("CRP: " + this.getCRPPsicologo());
+			System.out.println("Especialidade: " + this.getEspecialidade());
+			System.out.println("Valor da consulta:" + this.getValorConsulta() + "reais");
+			System.out.println("Formação: " + this.getFormacao());
+			System.out.println("Disponibilidade: " + this.getDisponibilidade());
+			System.out.println("Avaliação: " + this.getAvaliacao());
+			System.out.println("Bio: " + this.getBio());
+			
+		} 
+		else if(choice.equals("simples")) {
+			System.out.println("Psic[ologo " + this.getIdUser() + " - Nome: " + this.getNome() + " - Valor: " + this.getValorConsulta()+ "reais");
+		}
+	
+	}
     
 }

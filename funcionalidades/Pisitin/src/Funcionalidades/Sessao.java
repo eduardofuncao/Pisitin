@@ -1,44 +1,68 @@
 package Funcionalidades;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 public class Sessao {
-	private String id;
-	private long tempoComeco;
-	private long tempoFim;
+	private int id;
+	private LocalDateTime tempoComeco;
+	private LocalDateTime tempoFim;
+	private Usuario user;
 	
 	public Sessao() {
 		
 	}
 	
-	public Sessao(String id, long tempoComeco, long tempoFim) {
+	public Sessao(int id, LocalDateTime tempoComeco, LocalDateTime tempoFim, Usuario user) {
 		super();
 		this.id = id;
 		this.tempoComeco = tempoComeco;
 		this.tempoFim = tempoFim;
+		this.user = user;
 	}
 
-	public String getId() {
+	
+	
+	public Usuario getUser() {
+		return user;
+	}
+
+	public void setUser(Usuario user) {
+		this.user = user;
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public long getTempoComeco() {
+	public LocalDateTime getTempoComeco() {
 		return tempoComeco;
 	}
 
-	public void setTempoComeco(long tempoComeco) {
+	public void setTempoComeco(LocalDateTime tempoComeco) {
 		this.tempoComeco = tempoComeco;
 	}
 
-	public long getTempoFim() {
+	public LocalDateTime getTempoFim() {
 		return tempoFim;
 	}
 
-	public void setTempoFim(long tempoFim) {
+	public void setTempoFim(LocalDateTime tempoFim) {
 		this.tempoFim = tempoFim;
 	}
 	
+	public String start(LocalDateTime tempoAtual) {
+		this.setTempoComeco(tempoAtual);
+		return "Sessão iniciada em " + tempoAtual;
+	}
+	
+	public String end(LocalDateTime tempoAtual) {
+		this.setTempoFim(tempoAtual);
+		int duracao = (int) ChronoUnit.SECONDS.between(this.getTempoComeco(), this.getTempoFim()); 
+		return "Sessão finalizada em: " + tempoAtual + "\nTempo decorrido durante a sesão: " + duracao + " segundos";
+	}
 	
 }

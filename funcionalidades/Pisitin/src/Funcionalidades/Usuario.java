@@ -1,7 +1,7 @@
 package Funcionalidades;
 
 public class Usuario {
-    private String idUser;
+    private int idUser;
     private String nome;
     private String email;
     private String telefone;
@@ -13,7 +13,7 @@ public class Usuario {
     	
     }
     
-	public Usuario(String idUser, String nome, String email, String telefone, String cidade, String sexo, String bio) {
+	public Usuario(int idUser, String nome, String email, String telefone, String cidade, String sexo, String bio) {
 		this.idUser = idUser;
 		this.nome = nome;
 		this.email = email;
@@ -23,11 +23,11 @@ public class Usuario {
 		this.bio = bio;
 	}
 
-	public String getIdUser() {
+	public int getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(String idUser) {
+	public void setIdUser(int idUser) {
 		this.idUser = idUser;
 	}
 
@@ -77,6 +77,14 @@ public class Usuario {
 
 	public void setBio(String bio) {
 		this.bio = bio;
+	}
+	
+	protected void showUser() {
+		System.out.println("Nome: " + this.getNome());
+		System.out.println("Email: " + this.getEmail());
+		System.out.println("Telefone: " + this.getTelefone());
+		System.out.println("Cidade: " + this.getCidade());
+		System.out.println("Sexo: " + this.getSexo());
 	}
     
     
