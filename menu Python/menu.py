@@ -9,7 +9,7 @@ Funcionalidades implementadas:
 A DEFINIR
 '''
 
-
+#listas de informações que serão guardadas
 nome_pac = []
 região_pac = []
 area_pac = []
@@ -21,7 +21,7 @@ area_psi = []
 qntd_pac = 0
 qntd_psi = 0
 
-
+#começo do loop, e menu de funcionalidades
 stop = False
 while not stop:
     print('''
@@ -34,9 +34,12 @@ while not stop:
 ''')
     sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
     while not (1 <= sel <= 5):
+        #garantindo que o usuário não erre na digitacão
         print('Erro! Digite um número que esteja na lista de opções.')
         sel = int(input("Digite o código da funcionalidade para acessar as suas funções: "))
-
+    
+    
+    #cadastro psicológo
     if sel == 1:
         print("----Cadastro Psicólogo----")
         nome_psi.append(input("Digite o seu nome: "))
@@ -44,25 +47,37 @@ while not stop:
         região_psi.append(input("Digite a sua região: "))
         CFP_psi = int(input("Digite o seu CFP, Cadastro Nacional de Psicólogas(os):"))
         area_psi.append(int(input("Escolha a sua área de atuação:\n 1-Psicanálise\n 2-Psicologia Analítica\n 3-Cognitivo-Comportamental:")))
+        #garantindo que o usuário não erre na digitacão
+        while not( 1<= area_psi <=3):
+            print("Erro! Digite um numero que conste na lista!")
+            area_psi.append(int(input("Escolha a sua área de atuação:\n 1-Psicanálise\n 2-Psicologia Analítica\n 3-Cognitivo-Comportamental:")))
+        
+        
         qntd_psi += 1
         print("Sucesso ao se cadastrar!")
-
+    #cadastro paciente
     elif sel == 2:
         print("----Cadastro Paciente----")
         nome_pac.append(input("Digite o seu nome: "))
         senha_pac = input("Digite uma senha: ")
         região_pac.append(input("Digite a sua região: "))
         area_pac.append(int(input("Escolha a sua área de atuação:\n 1-Psicanálise\n 2-Psicologia Analítica\n 3-Cognitivo-Comportamental:")))
+        #garantindo que o usuário não erre na digitacão
+        while not( 1<= area_pac <=3):
+            print("Erro! Digite um numero que conste na lista!")
+            area_pac.append(int(input("Escolha a sua área de atuação:\n 1-Psicanálise\n 2-Psicologia Analítica\n 3-Cognitivo-Comportamental:")))
+        
         qntd_pac += 1
         print("Sucesso ao se cadastrar!")
-
+    #exibir informações de TODAS as contas cadastradas, quanto paciente, quanto psicólogo
     elif sel == 3:
         print("Informações da conta")
         for i in range(qntd_pac):
             print(f"Nome paciente: {nome_pac[i]} | Região paciente: {região_pac[i]} | Área escolhida paciente: {area_pac[i]}")
         for i in range(qntd_psi):
             print(f"Nome psicólogo: {nome_psi[i]} | Região psicólogo: {região_psi[i]} | Área escolhida psicólogo: {area_psi[i]}")
-
+    
+    #exibir apenas contas nas quais tenham informações crucias que combinam uma com a outra
     elif sel == 4:
         print("Contas que combinam com você!")
         for i in range(qntd_pac):
@@ -77,7 +92,7 @@ while not stop:
                 else:
                     print("Ok, buscaremos mais opções para você!")
                 
-
+    #sair do programa
     elif sel == 5:
         print("Saindo do programa...")
         stop = True
