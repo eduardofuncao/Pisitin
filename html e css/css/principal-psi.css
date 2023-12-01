@@ -1,0 +1,103 @@
+body{
+    background-image: url(../img/background.jpeg);
+}
+header{
+    background-color: bisque;
+    padding: auto;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 120px;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 149, 19);
+    font-size: 30px;
+}
+a{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(255, 149, 19);
+    text-decoration: none;
+}
+li{
+    font-family: sans-serif;
+    font-size: 18px; 
+}
+p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(255, 149, 19);
+}
+.txt-ini{
+    text-align: center; 
+}
+.txt-comb{
+    margin-left: 2vh;
+    -webkit-text-stroke: black 0.5px;
+}
+.container-menu{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+footer{
+    background-color: bisque;
+    width: 100vw;
+    height: 10vh;
+    margin-left: -10px;
+    margin-bottom: -1vh;
+    margin-top: 8vh;
+    padding-top: 18px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.container-menu2{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.logo{
+    margin-left: 20px;
+    margin-top: 15px;
+
+}
+.menu{
+
+margin-top: 52px;
+margin-left: 50px;
+}
+.container-lista{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-lista{
+    background-color: rgb(255, 244, 229);
+    width: 35vw;
+    height: 17vh;
+    border-radius: 30px;
+    margin-top: 4vh;
+    margin-left: 4vw;
+}
+.pac{
+    width: 7vw;
+    border-radius:45px;
+    padding-top: 2vh;
+}
+.info-pac{
+    font-size: 20px;
+}
+.reg-pac{
+    font-size: 16px;
+    margin-top: -2vh;
+    color: rgb(108, 99, 98);
+}
+.ace-rec{
+    width: 3vw;
+}
+.big-box{
+    width: 60vw;
+    height: 110vh;
+    background-color: bisque;
+    border-radius: 20px;
+}
