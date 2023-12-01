@@ -64,7 +64,7 @@ public class Sessao {
 	public String end(LocalDateTime tempoAtual) {
 		this.setTempoFim(tempoAtual);
 		int duracao = (int) ChronoUnit.SECONDS.between(this.getTempoComeco(), this.getTempoFim()); 
-		return "Sessão finalizada em: " + tempoAtual + "\nTempo decorrido durante a sesão: " + duracao + " segundos";
+		return "Sessão finalizada em: " + tempoAtual + "\nTempo decorrido durante a sessão: " + duracao + " segundos";
 	}
 	
 }
