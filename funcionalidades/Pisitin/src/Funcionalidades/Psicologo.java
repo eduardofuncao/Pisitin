@@ -1,9 +1,11 @@
 package Funcionalidades;
 
+import java.util.ArrayList;
+
 public class Psicologo extends Usuario{
 	private String CRPPsicologo;
-	private String especialidade;
-    private String valorConsulta;
+	private ArrayList<Especialidade> especialidades;
+    private double valorConsulta;
     private String formacao;
     private String disponibilidade;
     private String avaliacao;
@@ -13,10 +15,10 @@ public class Psicologo extends Usuario{
 	}
 	
 	public Psicologo(int idUser, String nome, String email, String telefone, String cidade, String sexo,
-			String bio, String CRPPsicologo, String especialidade, String valorConsulta, String formacao, String disponibilidade, String avaliacao) {
+			String bio, String CRPPsicologo, ArrayList<Especialidade> especialidades, double valorConsulta, String formacao, String disponibilidade, String avaliacao) {
 		super(idUser, nome, email, telefone, cidade, sexo, bio);
 		this.CRPPsicologo = CRPPsicologo;
-		this.especialidade = especialidade;
+		this.especialidades = especialidades;
 		this.valorConsulta = valorConsulta;
 		this.formacao = formacao;
 		this.disponibilidade = disponibilidade;
@@ -31,19 +33,20 @@ public class Psicologo extends Usuario{
 		CRPPsicologo = cRPPsicologo;
 	}
 
-	public String getEspecialidade() {
-		return especialidade;
+
+	public ArrayList<Especialidade> getEspecialidade() {
+		return especialidades;
 	}
 
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
+	public void setEspecialidades(ArrayList<Especialidade> especialidade) {
+		this.especialidades = especialidade;
 	}
 
-	public String getValorConsulta() {
+	public double getValorConsulta() {
 		return valorConsulta;
 	}
 
-	public void setValorConsulta(String valorConsulta) {
+	public void setValorConsulta(double valorConsulta) {
 		this.valorConsulta = valorConsulta;
 	}
 
@@ -71,17 +74,25 @@ public class Psicologo extends Usuario{
 		this.avaliacao = avaliacao;
 	}
     
+	/* imprime os atributos dos usuários do tipo psicólogo. 
+	 * A entrada do método pode ser tanto "total" quanto "simples". No modo simples, 
+	 * somente o nome do usuário e seu id serão imprimidos, enquanto que no modo total todos os atributos serão mostrados.
+	 */
 	public void show(String choice) {
 		if (choice.equals("total")){
-			System.out.println("Paciente " + this.getIdUser());
+			System.out.println("Psicólogo " + this.getIdUser());
 			this.showUser();
 			System.out.println("CRP: " + this.getCRPPsicologo());
-			System.out.println("Especialidade: " + this.getEspecialidade());
-			System.out.println("Valor da consulta:" + this.getValorConsulta() + "reais");
+			
+			System.out.println("Especialidades:");
+			for(Especialidade esp:this.especialidades) {
+				System.out.println(esp.getNome());
+			}
+			
+			System.out.println("Valor da consulta:" + this.getValorConsulta() + " reais");
 			System.out.println("Formação: " + this.getFormacao());
 			System.out.println("Disponibilidade: " + this.getDisponibilidade());
 			System.out.println("Avaliação: " + this.getAvaliacao());
-			System.out.println("Bio: " + this.getBio());
 			
 		} 
 		else if(choice.equals("simples")) {

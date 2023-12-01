@@ -54,11 +54,13 @@ public class Sessao {
 		this.tempoFim = tempoFim;
 	}
 	
+	// Define a data e hora de início de uma sessão e retorna uma mensagem com essas informações
 	public String start(LocalDateTime tempoAtual) {
 		this.setTempoComeco(tempoAtual);
-		return "Sessão iniciada em " + tempoAtual;
+		return "Sessão iniciada em " + tempoAtual + " para " + this.user.getNome();
 	}
 	
+	// Defini a data e hora do final de uma sessão e retorna uma mensagem com essas informações, também contendo a duração da sessão
 	public String end(LocalDateTime tempoAtual) {
 		this.setTempoFim(tempoAtual);
 		int duracao = (int) ChronoUnit.SECONDS.between(this.getTempoComeco(), this.getTempoFim()); 
