@@ -3,15 +3,17 @@ package Funcionalidades;
 public class ChatBot {
 	private int id;
 	private String dataInicio;
+	private Usuario user;
 	
 	public ChatBot() {
 		
 	}
 	
-	public ChatBot(int id, String dataInicio) {
+	public ChatBot(int id, String dataInicio, Usuario user) {
 		super();
 		this.id = id;
 		this.dataInicio = dataInicio;
+		this.user = user;
 	}
 
 	public int getId() {
