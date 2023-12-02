@@ -1,0 +1,73 @@
+body{
+    min-height: 100vh;
+    background-color: rgb(255, 244, 229);
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 149, 19);
+    font-size: 30px;
+}
+a{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(255, 149, 19);
+    text-decoration: none;
+}
+header{
+    background-color: bisque;
+    padding: auto;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 120px;
+}
+li{
+    font-family: sans-serif;
+    font-size: 18px; 
+}
+.container-menu{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+footer{
+    background-color: bisque;
+    width: 100vw;
+    height: 10vh;
+    margin-left: -10px;
+    margin-top: 100px;
+    padding-top: 18px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.container-menu2{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.logo{
+    margin-left: 20px;
+    margin-top: 15px;
+
+}
+.menu{
+
+margin-top: 52px;
+margin-left: 50px;
+}
+.nomes{
+    display: flex;
+}
+.art{
+    width:95px;
+}
+.link{
+    width: 80px;
+}
+.edu{
+    width: 95px;
+}
+.jhoe{
+    width: 150px;
+    height: 105px;
+}
