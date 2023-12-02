@@ -19,6 +19,7 @@ A solução apresentada é a de criar um sistema online que permita com que **ps
 - Criar lista de psicólogos que são possíveis matches para cada paciente baseado na compatibilidade entro os dois (localização, especialização do terapêuta, etc.);
 - Dinamizar o período entre primeiro contato e agendamento de consulta teste com o psicólogo.
 
-### [link para vídeo exemplificando o funcionamento da solução](linkAqui)
-
+### Links para os vídeos:
+- [Youtube](https://youtu.be/KCUJmkaaj-s)
+- [Vimeo](https://vimeo.com/890498187?share=copy)
 
